@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+        .formSection {
+            display: grid;
+            grid-template-columns: 20% auto;
+            gap:30px;
+            padding: 20px;
+            
+        }
+
+        .formSection form {
+            padding: 15px;
+            box-shadow: 0px 0px 10px 2px #ccc;
+        }
+        .formSection form h3 {
+            text-align:  center;
+            padding-bottom: 15px;
+        }
+        .inputOuter {
+            margin-bottom: 10px;
+        }
+        .inputOuter label {
+            display: block;
+            font-size: 14px;
+        }
+        .inputOuter input {
+            width: 100%;
+            height: 30px;
+        }
+
+        .formSection form button {
+            width: 100%;
+            border: none;
+            background-color: blue;
+            color: white;
+            padding: 8px 0px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section class="formSection">
+        <form action="">
+            <h3> Enquire Now</h3>
+            <div class="inputOuter">
+                <label for="" >Name</label>
+                <input type="text"  name="userName" id="">
+            </div>
+            <div  class="inputOuter">
+                <label for="" >Email</label>
+                <input type="email"  name="userEmail" id="">
+            </div>
+            <div  class="inputOuter">
+                <label for="" >Phone</label>
+                <input type="text"  name="userPhone" id="">
+            </div>
+            <button>Save</button>
+        </form>
+        <div>
+            <table>
+                <thead>
+                <tr>
+                    <th>Sr. No</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody id = "tableBody">
+                    <tr>
+                    <td>1</td>
+                    <td>Yash</td>
+                    <td>@email.com</td>
+                    <td>8815693240</td>
+                    <td>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>

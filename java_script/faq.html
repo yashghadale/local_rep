@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            font-family: sans-serif;
+        }
+        h1 {
+            text-align: center;
+            padding: 50px 0px;
+        }
+        .faqMid{
+            max-width: 1000px;
+            margin: auto;
+        }
+        .faqItem {
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        .faqItem h3{
+            background-color: aqua;
+            padding: 10px;
+            position: relative;
+        }
+        .faqItem h3 span {
+            position: absolute;
+            right: 10px;
+        }
+        .ans {
+            padding: 10px;
+            display: none;
+        }
+        .showAns {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1> FAQs About DOM Traversing </h1>
+    <div class="faqMid">
+        <div class="faqItem">
+        <h3> 1 Hey Bro <span>+</span> </h3>
+        <div class="ans">
+        1 Hello
+        </div>
+    </div>
+      <div class="faqItem">
+        <h3> 1 Hey Bro <span>+</span></h3>
+        <div class="ans">
+        1 Hello
+        </div>
+    </div>
+     
+     </div>
+
+     <script>
+        let allQuestionList = document.querySelectorAll(".faqItem h3")
+
+        allQuestionList.forEach((question, index)=>{
+            question.addEventListener("click", ()=>{
+
+
+                allQuestionList.forEach((q, i)=> {
+                    if(i!=index)
+                    {
+                        q.lastElementChild.innerHTML="+"
+                        q.nextElementSibling.classList.remove('showAns')
+                    }
+                })
+                if(question.lastElementChild.innerHTML=="+")
+                {
+                    question.lastElementChild.innerHTML='-'
+                }
+                else {
+                     question.lastElementChild.innerHTML='+'
+                }                question.nextElementSibling.classList.toggle('showAns')
+
+            })
+        })
+     </script>
+    </body>
+   
+
+</html>
